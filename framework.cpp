@@ -1,5 +1,6 @@
-#include "cv.h"
-#include "highgui.h"
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui_c.h>
+#include <stdio.h>
 
 int main( int argc, char** argv )
 {
@@ -12,7 +13,6 @@ int main( int argc, char** argv )
 		printf( "\nto the VMWare image by selecting 'Virtual Machine' in the" );
 		printf( "\nVMWare player window header above. " );
 		printf( "\nThen select 'removable devices' and verify your camera is connected.\n\n\n" );
-		sleep( 15 );
 		assert(0);
 	}
 

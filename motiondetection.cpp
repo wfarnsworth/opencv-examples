@@ -33,7 +33,7 @@ cv::Mat foreground;		// foreground image
 
 
 
-int Algorithm(cv:: Mat &frame, double learningRate, int threshold ) 
+int my_Algorithm(cv:: Mat &frame, double learningRate, int threshold ) 
 {
 	Mat output;
 	double t = (double)cvGetTickCount();
@@ -144,7 +144,7 @@ int main( int argc, char *argv[] )
 //-------------------------------------------------------------------------
 
 		if( framenum++ > 5 )
-			algtime = Algorithm( frame, (10001-(LearningRate*100))/10000.0, Threshold );
+			algtime = my_Algorithm( frame, (10001-(LearningRate*100))/10000.0, Threshold );
 		else
 			continue;
 

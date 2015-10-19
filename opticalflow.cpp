@@ -64,7 +64,7 @@ void handleTrackedPoints(cv:: Mat &frame, cv:: Mat &output)
 }
 
 // FeatureTracker() : max_count(500), qlevel(0.01), minDist(10.) {}
-int Algorithm(cv:: Mat &frame, int max_count, double qlevel, double minDist ) 
+int my_Algorithm(cv:: Mat &frame, int max_count, double qlevel, double minDist ) 
 {
 	Mat output;
 	double t = (double)cvGetTickCount();
@@ -223,7 +223,7 @@ int main( int argc, char *argv[] )
 		if( qlevel == 0 ) 
 			qlevel = 1;
 		if( framenum++ > 5 )
-			algtime = Algorithm( frame, max_count?max_count:1, (double)qlevel/2000.0, (double)minDist );
+			algtime = my_Algorithm( frame, max_count?max_count:1, (double)qlevel/2000.0, (double)minDist );
 		else
 			continue;
 //-------------------------------------------------------------------------
