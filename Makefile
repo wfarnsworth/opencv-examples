@@ -1,5 +1,5 @@
 # SOURCES = cannyedgedetect facedetector linedetection motiondetection opticalflow
-SOURCES = cannyedgedetect
+SOURCES = cannyedgedetect smiledetect
 
 CXX_FLAGS += \
 		-I$(OPENCV_DIR). \
